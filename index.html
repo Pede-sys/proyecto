@@ -11,59 +11,110 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
+      /* Centramos todo el contenido principal de la página */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
     }
 
     h1 {
       text-align: center;
-      background-color: lab(73.67% 16.63 76.01); /* Fondo negro */
-      color: hsl(0, 0%, 0%); /* Texto blanco para contrastar */
+      background-color: lab(73.67% 16.63 76.01); 
+      color: hsl(0, 0%, 0%); 
       padding: 15px;
-      margin: 0;
+      margin: 0 0 20px 0;
+      width: 100%; /* Ocupa todo el ancho superior */
+    }
+
+    /* Contenedor general para alinear elementos al centro */
+    .centrado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    /* Estilo para los títulos de secciones */
+    h2 {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    img {
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    /* Clases para que las listas (consignas) queden alineadas a la izquierda (borde) */
+    .alineado-izquierda {
+      text-align: left;
+      width: 100%;
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    /* Ajuste para los iframes y enlaces */
+    iframe {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .enlaces-container {
+      text-align: center;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+
   <h1>RECETA DE PASTA CARBONARA</h1>
   
-  <img src="https://kitchenswagger.com/wp-content/uploads/2019/09/carbonara-2-final.jpg" alt="Imagen no disponible" width="250"> 
-  <br>
-  
-  <h2>Ingredientes</h2>
-  <br>
-  <img src="https://imag.bonviveur.com/ingredientes-necesarios-para-hacer-los-tallarines-a-la-carbonara.webp" alt="imagen no disponible" width="250">
-  <br>
-  <ul>
-    <li>200g de pasta (espaguetis o fettuccine)</li>
-    <li>100g de panceta o bacon</li>
-    <li>2 huevos</li>
-    <li>50g de queso parmesano rallado</li>
-    <li>Sal y pimienta al gusto</li>
-  </ul>
-  <br>
+  <div class="centrado">
+    <img src="https://kitchenswagger.com/wp-content/uploads/2019/09/carbonara-2-final.jpg" alt="Imagen no disponible" width="250"> 
+    
+    <h2>Ingredientes</h2>
+    <img src="https://imag.bonviveur.com/ingredientes-necesarios-para-hacer-los-tallarines-a-la-carbonara.webp" alt="imagen no disponible" width="250">
+    
+    <!-- Lista de ingredientes alineada a la izquierda -->
+    <ul class="alineado-izquierda">
+      <li>200g de pasta (espaguetis o fettuccine)</li>
+      <li>100g de panceta o bacon</li>
+      <li>2 huevos</li>
+      <li>50g de queso parmesano rallado</li>
+      <li>Sal y pimienta al gusto</li>
+    </ul>
 
-  <h2>Instrucciones</h2>
-  <br>
-  <img src="https://cdn.elcocinerocasero.com/imagen/paso-receta/1000/2022-08-15-21-05-05/espaguetis-a-la-carbonara-paso-6.jpeg" alt="Imagen no disponible" width="250">
-  <br>
-  <ol>
-    <li>Cocina la pasta según las instrucciones del paquete. Escúrrela y reserva un poco del agua de cocción.</li>
-    <li>En una sartén grande, cocina la panceta o bacon hasta que esté crujiente. Retira del fuego y reserva.</li>
-    <li>En un bol, bate los huevos y mezcla con el queso parmesano rallado. Agrega sal y pimienta al gusto.</li>
-    <li>Agrega la pasta caliente a la sartén con la panceta y mezcla bien.</li>
-    <li>Retira del fuego y añade la mezcla de huevos y queso, revolviendo rápidamente para que los huevos no se cocinen demasiado. Si es necesario, agrega un poco del agua de cocción reservada para obtener una salsa más cremosa.</li>
-  </ol>
-  <br>
+    <h2>Instrucciones</h2>
+    <img src="https://cdn.elcocinerocasero.com/imagen/paso-receta/1000/2022-08-15-21-05-05/espaguetis-a-la-carbonara-paso-6.jpeg" alt="Imagen no disponible" width="250">
+    
+    <!-- Instrucciones (consignas) alineadas a la izquierda -->
+    <ol class="alineado-izquierda">
+      <li>Cocina la pasta según las instrucciones del paquete. Escúrrela y reserva un poco del agua de cocción.</li>
+      <li>En una sartén grande, cocina la panceta o bacon hasta que esté crujiente. Retira del fuego y reserva.</li>
+      <li>En un bol, bate los huevos y mezcla con el queso parmesano rallado. Agrega sal y pimienta al gusto.</li>
+      <li>Agrega la pasta caliente a la sartén con la panceta y mezcla bien.</li>
+      <li>Retira del fuego y añade la mezcla de huevos y queso, revolviendo rápidamente para que los huevos no se cocinen demasiado. Si es necesario, agrega un poco del agua de cocción reservada para obtener una salsa más cremosa.</li>
+    </ol>
 
-  <iframe src="https://www.youtube.com/embed/uaG3c38Ksfk" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-  <br>
+    <!-- Video de YouTube centrado -->
+    <iframe src="https://www.youtube.com/embed/uaG3c38Ksfk" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189984.03223063548!2d12.381394145417032!3d41.90278348981292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f2935eb7%3A0x80838d7211158586!2sRoma%2C%20Italia!5e0!3m2!1ses!2s!4v1700000000000!5m2!1ses!2s" width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <br>
+    <!-- Mapa de Google centrado -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189984.03223063548!2d12.381394145417032!3d41.90278348981292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f2935eb7%3A0x80838d7211158586!2sRoma%2C%20Italia!5e0!3m2!1ses!2s!4v1700000000000!5m2!1ses!2s" width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <p>Por acá dejo links sobre otras recetas que les pueden gustar e interesar al igual que la mía:</p>
-  <a target="_blank" href="https://www.gourmet.cl/recetas/pasta-carbonara/">Ver en Gourmet</a><br>
-  <a target="_blank" href="https://cookpad.com/ar/buscar/espaguetis%20salsa%20carbonara">Ver en Cookpad</a><br>
-  <a target="_blank" href="https://diegodoal.com/recetas/carbonara">Ver receta Diego Doal</a><br>
-  <a target="_blank" href="https://pastaslamuneca.com/recetas/pasta-a-la-carbonara/">Ver en Pastas La Muñeca</a><br>
+    <div class="enlaces-container">
+      <p>Por acá dejo links sobre otras recetas que les pueden gustar e interesar al igual que la mía:</p>
+      <a target="_blank" href="https://www.gourmet.cl/recetas/pasta-carbonara/">Ver en Gourmet</a><br>
+      <a target="_blank" href="https://cookpad.com/ar/buscar/espaguetis%20salsa%20carbonara">Ver en Cookpad</a><br>
+      <a target="_blank" href="https://diegodoal.com/recetas/carbonara">Ver receta Diego Doal</a><br>
+      <a target="_blank" href="https://pastaslamuneca.com/recetas/pasta-a-la-carbonara/">Ver en Pastas La Muñeca</a>
+    </div>
+  </div>
+
 </body>
 </html>
